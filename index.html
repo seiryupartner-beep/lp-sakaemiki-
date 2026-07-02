@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>無料体験コーチングセッション｜榮 美希</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #7b6fa0;
+      --primary-light: #b8aed4;
+      --primary-pale: #f0edf8;
+      --accent: #c9a96e;
+      --accent-light: #f5e9d5;
+      --text-dark: #2d2d2d;
+      --text-mid: #555;
+      --text-light: #888;
+      --white: #fff;
+      --bg: #faf9f7;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text-dark);
+      line-height: 1.8;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #2c2540 0%, #4a3a6b 40%, #7b6fa0 100%);
+    }
+
+    .hero-bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.08;
+      background: white;
+    }
+    .hero-bg-circle.c1 { width: 600px; height: 600px; top: -150px; right: -100px; }
+    .hero-bg-circle.c2 { width: 300px; height: 300px; bottom: 50px; left: -80px; }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-text { color: white; }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 6px 18px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+
+    .hero-title span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      line-height: 2;
+      opacity: 0.9;
+      margin-bottom: 36px;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 18px 48px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      box-shadow: 0 8px 30px rgba(201,169,110,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(201,169,110,0.5); }
+
+    .hero-note {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+    }
+
+    .hero-image-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border-radius: 50% 40% 50% 40%;
+      background: rgba(255,255,255,0.08);
+      z-index: 0;
+    }
+
+    .hero-photo {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    /* ===== WORRY ===== */
+    .section { padding: 80px 20px; }
+    .section-inner { max-width: 860px; margin: 0 auto; }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      text-align: center;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 48px;
+      color: var(--text-dark);
+    }
+
+    .section-title span { color: var(--primary); }
+
+    .worry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .worry-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-left: 4px solid var(--primary-light);
+      position: relative;
+    }
+
+    .worry-card::before {
+      content: '…';
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: var(--primary-light);
+      line-height: 1;
+    }
+
+    .worry-card p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-mid);
+    }
+
+    .worry-card strong {
+      display: block;
+      font-size: 1.05rem;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    /* ===== PROMISE ===== */
+    .promise-section {
+      background: linear-gradient(135deg, var(--primary-pale) 0%, #fff 100%);
+    }
+
+    .promise-lead {
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 2;
+      color: var(--text-mid);
+      margin-bottom: 48px;
+    }
+
+    .promise-lead strong {
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+
+    .promise-quote {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 40px rgba(123,111,160,0.1);
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+
+    .promise-quote p {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      line-height: 2;
+      color: var(--text-dark);
+    }
+
+    .promise-quote p span {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* ===== FLOW ===== */
+    .flow-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .flow-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      align-items: start;
+      position: relative;
+    }
+
+    .flow-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 39px;
+      top: 70px;
+      width: 2px;
+      height: calc(100% - 30px);
+      background: var(--primary-light);
+    }
+
+    .flow-num {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+      box-shadow: 0 4px 16px rgba(123,111,160,0.3);
+    }
+
+    .flow-num .min {
+      font-size: 0.65rem;
+      opacity: 0.85;
+    }
+
+    .flow-num .num {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .flow-body {
+      background: white;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+
+    .flow-phase {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .flow-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+    }
+
+    .flow-desc {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.9;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-section { background: var(--text-dark); color: white; }
+
+    .about-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .about-photos img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+
+    .about-photos img:first-child {
+      grid-column: 1 / -1;
+      aspect-ratio: 4/3;
+    }
+
+    .about-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .about-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .about-name-en {
+      font-size: 0.85rem;
+      letter-spacing: 0.2em;
+      color: var(--primary-light);
+      margin-bottom: 28px;
+    }
+
+    .about-text {
+      font-size: 0.95rem;
+      line-height: 2.1;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .about-text p + p { margin-top: 16px; }
+
+    /* ===== DETAIL ===== */
+    .detail-section { background: var(--primary-pale); }
+
+    .detail-box {
+      background: white;
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 8px 40px rgba(123,111,160,0.1);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .detail-table { width: 100%; border-collapse: collapse; }
+
+    .detail-table tr { border-bottom: 1px solid #f0edf8; }
+    .detail-table tr:last-child { border-bottom: none; }
+
+    .detail-table th {
+      width: 120px;
+      padding: 18px 0;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .detail-table td {
+      padding: 18px 0 18px 16px;
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+    }
+
+    .detail-table td strong {
+      color: var(--text-dark);
+      font-size: 1.1rem;
+    }
+
+    .price-free {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .seats-badge {
+      display: inline-block;
+      background: #fff0f0;
+      color: #e05555;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-left: 12px;
+      vertical-align: middle;
+    }
+
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(135deg, #2c2540 0%, #4a3a6b 60%, #7b6fa0 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .cta-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 700;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .cta-title span { color: var(--accent); }
+
+    .cta-sub {
+      font-size: 1rem;
+      opacity: 0.85;
+      margin-bottom: 40px;
+      line-height: 2;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 22px 64px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      box-shadow: 0 8px 30px rgba(201,169,110,0.5);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(201,169,110,0.6); }
+
+    .cta-note {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    /* ===== FORM ===== */
+    .form-section { background: var(--bg); }
+
+    .form-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 24px;
+      padding: 48px 40px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+    }
+
+    .form-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+      color: var(--text-dark);
+    }
+
+    .form-sub {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-bottom: 32px;
+    }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-group label span {
+      background: var(--primary);
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid #e8e4f0;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--text-dark);
+      background: var(--bg);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+      background: white;
+    }
+
+    .form-group textarea { resize: vertical; min-height: 100px; }
+
+    .form-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 18px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      box-shadow: 0 6px 24px rgba(123,111,160,0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(123,111,160,0.45); }
+
+    .form-privacy {
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-light);
+      margin-top: 16px;
+    }
+
+    /* ===== ABOUT MESSAGE ===== */
+    .about-message {
+      margin-top: 24px;
+      padding: 24px 28px;
+      background: rgba(255,255,255,0.10);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #f0e8ff;
+    }
+
+    .about-message strong {
+      font-size: 1.15rem;
+      color: #d8b4fe;
+    }
+
+    /* ===== VOICE ===== */
+    .voice-section { background: linear-gradient(135deg, #2c2540 0%, #4a3a6b 100%); color: white; }
+
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    .voice-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px;
+      padding: 32px 28px;
+      position: relative;
+    }
+
+    .voice-quote {
+      font-size: 3rem;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 12px;
+      font-family: Georgia, serif;
+    }
+
+    .voice-text {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: #f0e8ff;
+      margin-bottom: 20px;
+    }
+
+    .voice-text strong {
+      color: #d8b4fe;
+      font-size: 1.05rem;
+    }
+
+    .voice-meta {
+      font-size: 0.8rem;
+      color: var(--primary-light);
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 14px;
+    }
+
+    /* ===== RESULT ===== */
+    .result-section { background: var(--bg); }
+
+    .result-lead {
+      text-align: center;
+      font-size: 1rem;
+      color: var(--text-mid);
+      margin-bottom: 40px;
+      line-height: 1.9;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border-top: 4px solid var(--primary-light);
+    }
+
+    .result-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    .result-card h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .result-card p {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.9;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--text-dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 0.8rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 60px 24px;
+        text-align: center;
+      }
+
+      .hero-image-wrap { order: -1; }
+
+      .hero-photo {
+        max-width: 280px;
+        border-radius: 50%;
+        aspect-ratio: 1;
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        padding: 60px 24px;
+      }
+
+      .about-photos img:first-child { aspect-ratio: 16/9; }
+
+      .detail-box { padding: 32px 24px; }
+
+      .form-wrap { padding: 36px 24px; }
+
+      .flow-item { grid-template-columns: 60px 1fr; }
+      .flow-num { width: 60px; height: 60px; }
+      .flow-item:not(:last-child)::after { left: 29px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg-circle c1"></div>
+  <div class="hero-bg-circle c2"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">✦ 無料体験コーチングセッション ✦</div>
+      <h1 class="hero-title">
+        あなたの中に、<br>
+        <span>もっと軽やかな</span><br>
+        <span>自分がいる。</span>
+      </h1>
+      <p class="hero-subtitle">
+        うまく話せなくていい。まとまらなくていい。<br>
+        あなたのポテンシャルは、すでにそこにある。<br>
+        ただ、どこかで詰まっているだけ。<br><br>
+        90分後、少しだけ体が軽くなっていたら、<br>
+        それで十分です。
+      </p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeiR0YVStz5KbgFVoCLJ4duyzYzP_rCSa9Mzw4HpteqYaxpSA/viewform?usp=publish-editor" target="_blank" class="hero-cta">無料で申し込む →</a>
+      <p class="hero-note">Zoom 90分 ／ 完全無料</p>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="hero.jpg" alt="榮美希" class="hero-photo">
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORRY ===== -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">WORRY</p>
+    <h2 class="section-title">こんな感覚、<span>ありませんか？</span></h2>
+    <div class="worry-grid">
+      <div class="worry-card">
+        <strong>なにかやりたい。でも何をやりたいかわからない</strong>
+        <p>やる気はある。エネルギーもある。でも「何をやりたいのか」がわからなくて、動けないまま時間だけが過ぎていく。</p>
+      </div>
+      <div class="worry-card">
+        <strong>やった方がいいって分かってる、でも後回し</strong>
+        <p>頭では「やらなきゃ」とわかっている。でも気づいたらまた後回しにしている。その繰り返しに、少し疲れてきた。</p>
+      </div>
+      <div class="worry-card">
+        <strong>趣味がない</strong>
+        <p>「好きなことは？」と言われると困る。仕事以外に夢中になれるものが見つからない。それが何となく寂しい。</p>
+      </div>
+      <div class="worry-card">
+        <strong>本当の自分って？？？わからない</strong>
+        <p>役割や肩書きを外したとき、「自分」って何だろうと思う。誰かの期待に応えてきた分、自分の輪郭がぼやけてきた。</p>
+      </div>
+      <div class="worry-card">
+        <strong>副業したい。でも一歩が踏み出せない</strong>
+        <p>会社員のまま何かを始めたい気持ちはある。でも「何をすればいいか」「自分にできるのか」がわからなくて、ずっと考えたまま時間だけが過ぎていく。</p>
+      </div>
+      <div class="worry-card">
+        <strong>このまま流されていくのが怖い</strong>
+        <p>毎日こなしているだけ。気づいたら何年も経っていた。もっと軽やかに、自分らしく生きたいのに、方法がわからない。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMISE ===== -->
+<section class="section promise-section">
+  <div class="section-inner">
+    <p class="section-label">PROMISE</p>
+    <h2 class="section-title">このセッションで<span>大切にすること</span></h2>
+
+    <div class="promise-quote">
+      <p>
+        「どこまで話していいんだろう」<br>
+        「否定されないかな」<br><br>
+        そんな不安を持ったまま来てください。<br><br>
+        何を聞いても<span>「そうなのね」「こういうこと？」</span><br>
+        と理解しようとする姿勢で、ただ受け取ります。<br><br>
+        あなたを変えようとするのではありません。<br>
+        あなたの中にある流れを、一緒に取り戻すのです。
+      </p>
+    </div>
+
+    <p class="promise-lead">
+      深掘りも追及もしません。<br>
+      大切にするのは、<strong>「安心」と「解放」</strong>。<br><br>
+      あなたのポテンシャルは、すでにそこにある。<br>
+      ただ詰まっているだけ。その詰まりを一緒に見つけて、<br>
+      あなたらしい流れを取り戻す90分です。
+    </p>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">SESSION FLOW</p>
+    <h2 class="section-title">セッションの<span>流れ</span></h2>
+    <div class="flow-list">
+      <div class="flow-item">
+        <div class="flow-num">
+          <span class="min">0〜5</span>
+          <span class="num">分</span>
+        </div>
+        <div class="flow-body">
+          <p class="flow-phase">STEP 01 ／ 安心の場を作る</p>
+          <h3 class="flow-title">まず、ほっとしてください</h3>
+          <p class="flow-desc">「今日は答えを出さなくていいです」「うまく話せなくても大丈夫です」。そんな言葉から始めます。あなたのペースで、ゆっくりでいい。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">
+          <span class="min">5〜20</span>
+          <span class="num">分</span>
+        </div>
+        <div class="flow-body">
+          <p class="flow-phase">STEP 02 ／ ただ、聴く</p>
+          <h3 class="flow-title">評価も提案もしません</h3>
+          <p class="flow-desc">「最近どんなことが気になっていますか？」広い問いから始めて、何を言っても「そうなのね」「こういうこと？」と確認するだけ。ただ受け取る時間です。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">
+          <span class="min">20〜40</span>
+          <span class="num">分</span>
+        </div>
+        <div class="flow-body">
+          <p class="flow-phase">STEP 03 ／ 本音が流れ出す</p>
+          <h3 class="flow-title">あなたの言葉が動き始める</h3>
+          <p class="flow-desc">安心できると、自然と本音が出てきます。「本当はどうしたいんですか？」と一度だけ問います。答えが出なくてもいい。その「わからない」も、大切な言葉です。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">
+          <span class="min">40〜55</span>
+          <span class="num">分</span>
+        </div>
+        <div class="flow-body">
+          <p class="flow-phase">STEP 04 ／ 体感が変わる</p>
+          <h3 class="flow-title">「あ、できる気がしてきた」</h3>
+          <p class="flow-desc">「今この瞬間、何か変わった感覚はありますか？」。その変化をあなた自身の言葉で言語化します。その体感があれば、「できる」に変わる。「明日ひとつだけやるとしたら？」と小さな一歩を一緒に見つけます。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div class="flow-num">
+          <span class="min">55〜60</span>
+          <span class="num">分</span>
+        </div>
+        <div class="flow-body">
+          <p class="flow-phase">STEP 05 ／ 余韻を持ち帰る</p>
+          <h3 class="flow-title">「話してよかった」で終わる</h3>
+          <p class="flow-desc">「今日話してみてどうでしたか？」。その感想を聞いて終わります。次のステップは押しつけません。続けたいと思ったら、いつでも。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULT ===== -->
+<section class="section result-section">
+  <div class="section-inner">
+    <p class="section-label">RESULT</p>
+    <h2 class="section-title">セッションを受けたら<span>どうなるの？</span></h2>
+    <p class="result-lead">「これで何か変わるの？」そんな疑問を持っていていい。よくある変化をご紹介します。</p>
+    <div class="result-grid">
+      <div class="result-card">
+        <div class="result-icon">✨</div>
+        <h3>「話したら、なぜか体が軽くなった」</h3>
+        <p>話すだけで、ずっと抱えていたものが整理される感覚があります。「こんなに抱えてたんだ」と気づく方も。</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🌱</div>
+        <h3>「やりたいことが、言葉になった」</h3>
+        <p>ぼんやりとはあるのに言葉にできなかったことが、話す中で「あ、そういうことか」と自分で言語化できる。</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🔥</div>
+        <h3>「まず、これだけやってみよ」が見つかった</h3>
+        <p>大きな変化じゃなくていい。小さな一歩が見つかって、自然に動ける。「なにがどうなん？」から「じゃ、やってみよ！」へ。</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">🌊</div>
+        <h3>後回しにしなくなった</h3>
+        <p>「やらなきゃ」と思いながら止まっていたことが、なぜかスッと動き始める。あの詰まりが、どこかへ流れていった感覚。</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">⭐</div>
+        <h3>「本当の自分」とピタッと一致する感覚</h3>
+        <p>外側の年齢や役割ではなく、内側の自分とつながる感覚。「これが私だ」と思える、根拠のない安心感が生まれる。</p>
+      </div>
+      <div class="result-card">
+        <div class="result-icon">💜</div>
+        <h3>「自分らしく生きていい」と思えた</h3>
+        <p>誰かの期待に応えるのではなく、内側からエネルギーが湧き出す感覚。「あなたはあなたのままでいい」と、自分に言えるようになる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOICE ===== -->
+<section class="section voice-section">
+  <div class="section-inner">
+    <p class="section-label" style="color:var(--accent)">VOICE</p>
+    <h2 class="section-title" style="color:white">セッションを受けた方の<span>声</span></h2>
+    <div class="voice-grid">
+
+      <div class="voice-card">
+        <div class="voice-quote">&ldquo;</div>
+        <p class="voice-text">
+          話しているうちに、<strong>思ってもいない言葉が自分の口から出てきて</strong>、びっくりしました。<br>
+          ずっと気づかなかった自分の思い込みや思考の癖に、初めて気づけた気がします。
+        </p>
+        <p class="voice-meta">30代・会社員女性 ／ 「なんとなく毎日が惰性だな」と感じていた方</p>
+      </div>
+
+      <div class="voice-card">
+        <div class="voice-quote">&ldquo;</div>
+        <p class="voice-text">
+          ただ話しているだけなのに、<strong>頭の中がどんどん整理されていって</strong>、セッションが終わった瞬間に「あ、やってみよう」と思えました。<br>
+          次の日には、ずっと後回しにしていたことを動き出していました。
+        </p>
+        <p class="voice-meta">40代・会社員男性 ／ 副業を考えながらも一歩踏み出せずにいた方</p>
+      </div>
+
+      <div class="voice-card">
+        <div class="voice-quote">&ldquo;</div>
+        <p class="voice-text">
+          本質をズバッと言ってもらって、<strong>「自分ってこんな良い面のある人間だったんだ」</strong>と初めて腑に落ちました。<br>
+          周りからずっと褒めてもらっていた言葉が、ようやく自分の中にすっと入ってきた感覚でした。<br>
+          そして、<strong>「私が大事にしていることって、こういうことだったんだ！」</strong>と、自分の軸にも気づけました。
+        </p>
+        <p class="voice-meta">30代・会社員女性 ／ 自分に自信が持てずにいた方</p>
+      </div>
+
+      <div class="voice-card">
+        <div class="voice-quote">&ldquo;</div>
+        <p class="voice-text">
+          「部下に嫌われてもいい」と思っていたのに、話していたら、<strong>本当は嫌われるのが怖くて、言いたくても言えなかったんだ</strong>と気づいてしまいました。<br>
+          強がっていた自分の裏側に、ずっと隠していた本音があったことに、初めて気づけました。
+        </p>
+        <p class="voice-meta">40代・管理職 ／ 「自分は強い」と思っていた方</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="section about-section">
+  <div class="about-inner">
+    <div class="about-photos">
+      <img src="about_top.jpg" alt="榮美希 自然の中で">
+      <img src="about1.jpg" alt="榮美希 海辺にて">
+      <img src="about3.jpg" alt="榮美希 笑顔">
+    </div>
+    <div class="about-text-wrap">
+      <p class="about-label">ABOUT</p>
+      <h2 class="about-name">榮 美希</h2>
+      <p class="about-name-en">Sakaemiki</p>
+      <div class="about-text">
+        <p>コンサルタントとして長年、人と組織に関わってきました。その中でずっと感じてきたことがあります。</p>
+        <p>「流れが詰まっている人は、能力がないのではない。ただ、どこかで詰まっているだけだ」と。</p>
+        <p>その人のポテンシャルはすでにそこにある。その詰まりを一緒に見つけて、<strong style="color:var(--accent)">その人らしい流れを取り戻す</strong>こと。それが私のコーチングです。</p>
+        <p>だから私は、あなたに自信を持って言えます。</p>
+        <div class="about-message">「<strong>あなたはあなたのままでいい。</strong>」<br>まだわからなくていい。うまく話せなくていい。<br>あなたの中にある流れを、一緒に取り戻しましょう。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DETAIL ===== -->
+<section class="section detail-section">
+  <div class="section-inner">
+    <p class="section-label">DETAIL</p>
+    <h2 class="section-title">セッション<span>詳細</span></h2>
+    <div class="detail-box">
+      <table class="detail-table">
+        <tr>
+          <th>料金</th>
+          <td><span class="price-free">無料</span></td>
+        </tr>
+        <tr>
+          <th>時間</th>
+          <td><strong>90分</strong>（Zoom）</td>
+        </tr>
+        <tr>
+          <th>対象</th>
+          <td>
+            自分らしく生きたいけど何かが詰まっている方<br>
+            やりたいことはあるのに動けない方<br>
+            自分のポテンシャルを活かしきれていない気がする方<br>
+            もっと軽やかに、自分らしく生きていきたい方
+          </td>
+        </tr>
+        <tr>
+          <th>申込方法</th>
+          <td>下記フォームよりお申し込みください</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section cta-section">
+  <div class="section-inner" style="text-align:center;">
+    <h2 class="cta-title">
+      あなたの中に、<br>
+      <span>もっと軽やかな自分がいる。</span><br>
+      その流れを、一緒に取り戻しませんか。
+    </h2>
+    <p class="cta-sub">
+      まだわからなくていい。うまく話せなくていい。<br>
+      あなたらしい流れは、すでにあなたの中にある。
+    </p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeiR0YVStz5KbgFVoCLJ4duyzYzP_rCSa9Mzw4HpteqYaxpSA/viewform?usp=publish-editor" target="_blank" class="cta-btn">無料体験セッションに申し込む →</a>
+    <p class="cta-note">完全無料 ／ Zoom 90分</p>
+  </div>
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© 2026 榮 美希 All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
