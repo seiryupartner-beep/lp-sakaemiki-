@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社長の思いを、動く組織に変える | 整流パートナー 榮美希</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0d1b2a;
+      --navy-mid: #1a2e45;
+      --navy-light: #243b55;
+      --gold: #c9a96e;
+      --gold-light: #e8c98a;
+      --gold-pale: #f5e6c8;
+      --white: #ffffff;
+      --off-white: #f8f5f0;
+      --text-light: rgba(255,255,255,0.85);
+      --text-muted: rgba(255,255,255,0.6);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: var(--navy);
+      color: var(--white);
+      line-height: 1.8;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(13, 27, 42, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+    }
+
+    .header-logo {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+    }
+
+    .header-cta {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 24px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: all 0.3s;
+    }
+
+    .header-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 40px 80px;
+      background: linear-gradient(135deg, #0d1b2a 0%, #1a2e45 50%, #0d1b2a 100%);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 60%);
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-label {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 6px 20px;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      margin-bottom: 36px;
+      font-family: 'Noto Serif JP', serif;
+    }
+
+    .hero-catch {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 28px;
+      color: var(--white);
+    }
+
+    .hero-catch .gold { color: var(--gold); }
+
+    .hero-pain-list {
+      margin: 0 0 24px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-pain-list li {
+      font-size: 1rem;
+      color: var(--text-light);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .hero-pain-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 2;
+      margin-bottom: 36px;
+      border-left: 2px solid rgba(201,169,110,0.4);
+      padding-left: 16px;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--navy);
+      padding: 20px 56px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      transition: all 0.3s;
+      font-family: 'Noto Serif JP', serif;
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(201, 169, 110, 0.4);
+    }
+
+    .hero-note {
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .hero-photo-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-photo {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    /* ===== SECTION COMMON ===== */
+    section { padding: 100px 40px; }
+
+    .section-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-family: 'Noto Serif JP', serif;
+    }
+
+    .section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 600;
+      line-height: 1.5;
+      margin-bottom: 40px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 20px 0 44px;
+    }
+
+    /* ===== PROBLEM ===== */
+    .problem { background: var(--navy-mid); }
+
+    .problem-intro {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      margin-bottom: 36px;
+      line-height: 2;
+    }
+
+    .problem-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .problem-list li {
+      background: rgba(13, 27, 42, 0.8);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      border-left: 3px solid var(--gold);
+      padding: 18px 24px;
+      font-size: 0.97rem;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .problem-list li::before {
+      content: '・';
+      color: var(--gold);
+      margin-right: 4px;
+    }
+
+    .problem-bottom {
+      padding: 32px 36px;
+      background: rgba(201, 169, 110, 0.08);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 4px;
+    }
+
+    .problem-bottom p {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 2.1;
+    }
+
+    .problem-bottom .accent {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ===== CONCEPT ===== */
+    .concept { background: var(--navy); }
+
+    .concept-box {
+      background: linear-gradient(135deg, rgba(201, 169, 110, 0.1) 0%, rgba(201, 169, 110, 0.05) 100%);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      padding: 48px;
+      border-radius: 4px;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .concept-word {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--gold);
+      margin-bottom: 24px;
+      letter-spacing: 0.3em;
+    }
+
+    .concept-desc {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 2.2;
+    }
+
+    .concept-sub {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: var(--gold-pale);
+      font-family: 'Noto Serif JP', serif;
+    }
+
+    /* ===== FLOW (継続伴走) ===== */
+    .flow { background: var(--navy-mid); }
+
+    .flow-intro {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 2.1;
+      margin-bottom: 48px;
+    }
+
+    .flow-cycle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .flow-cycle-item {
+      background: rgba(201, 169, 110, 0.12);
+      border: 1px solid rgba(201, 169, 110, 0.35);
+      padding: 12px 22px;
+      font-size: 0.9rem;
+      color: var(--gold-pale);
+      font-family: 'Noto Serif JP', serif;
+      white-space: nowrap;
+    }
+
+    .flow-cycle-arrow {
+      color: var(--gold);
+      font-size: 1.2rem;
+      padding: 0 6px;
+    }
+
+    .flow-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .flow-step {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 0;
+      position: relative;
+    }
+
+    .flow-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 59px;
+      top: 80px;
+      bottom: -20px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), rgba(201, 169, 110, 0.3));
+    }
+
+    .flow-step-num {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 8px;
+    }
+
+    .flow-step-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: 0.03em;
+      flex-shrink: 0;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .flow-step-body {
+      padding: 8px 0 60px 32px;
+    }
+
+    .flow-step-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.3rem;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .flow-step-desc {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 2;
+    }
+
+    /* ===== SESSION PHOTO ===== */
+    .session-photo-section { background: var(--navy); }
+
+    .session-photo-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .session-photo {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      object-fit: cover;
+    }
+
+    .session-caption-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .session-caption-text {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 2.2;
+    }
+
+    /* ===== THEMES ===== */
+    .themes { background: var(--navy-mid); }
+
+    .themes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .themes-card {
+      background: rgba(13, 27, 42, 0.8);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      padding: 28px 24px;
+      border-radius: 2px;
+    }
+
+    .themes-card-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      color: var(--gold);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+    }
+
+    .themes-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .themes-card ul li {
+      font-size: 0.88rem;
+      color: var(--text-light);
+      padding: 5px 0;
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .themes-card ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.75rem;
+    }
+
+    .themes-first-box {
+      background: rgba(201, 169, 110, 0.08);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      padding: 32px 36px;
+      border-radius: 4px;
+    }
+
+    .themes-first-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .themes-first-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .themes-first-list li {
+      background: rgba(201, 169, 110, 0.12);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      padding: 8px 18px;
+      font-size: 0.88rem;
+      color: var(--gold-pale);
+      border-radius: 2px;
+    }
+
+    /* ===== CASE ===== */
+    .case { background: var(--navy); }
+
+    .case-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 36px;
+      padding: 12px 16px;
+      border-left: 2px solid rgba(201,169,110,0.3);
+    }
+
+    .case-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+    }
+
+    .case-card {
+      background: var(--navy-mid);
+      border: 1px solid rgba(201, 169, 110, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .case-card-header {
+      background: linear-gradient(135deg, rgba(201, 169, 110, 0.2) 0%, rgba(201, 169, 110, 0.05) 100%);
+      padding: 24px 28px;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+    }
+
+    .case-card-tag {
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 8px;
+    }
+
+    .case-card-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    .case-card-body { padding: 28px; }
+
+    .case-card-problem { margin-bottom: 20px; }
+
+    .case-card-problem-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .case-card-problem-text {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+
+    .case-card-result {
+      background: rgba(201, 169, 110, 0.1);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      padding: 20px;
+      border-radius: 2px;
+    }
+
+    .case-card-result-label {
+      font-size: 0.75rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .case-card-result-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1rem;
+      color: var(--gold-light);
+      font-weight: 600;
+      line-height: 1.8;
+    }
+
+    /* ===== VOICE ===== */
+    .voice { background: var(--navy-mid); }
+
+    .voice-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .voice-card {
+      background: var(--navy);
+      border: 1px solid rgba(201, 169, 110, 0.25);
+      border-radius: 4px;
+      padding: 40px 48px;
+      position: relative;
+    }
+
+    .voice-card::before {
+      content: '\201C';
+      font-family: Georgia, serif;
+      font-size: 6rem;
+      color: rgba(201, 169, 110, 0.15);
+      position: absolute;
+      top: 10px;
+      left: 24px;
+      line-height: 1;
+    }
+
+    .voice-headline {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.05rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    .voice-text {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 2.2;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .voice-attr {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-align: right;
+    }
+
+    /* ===== TARGET ===== */
+    .target { background: var(--navy); }
+
+    .target-box {
+      background: rgba(201, 169, 110, 0.07);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      padding: 40px 48px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .target-box p {
+      font-size: 1rem;
+      color: var(--text-light);
+      line-height: 2.2;
+    }
+
+    .target-box .accent {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ===== SERVICE ===== */
+    .service { background: var(--navy-mid); }
+
+    .service-table {
+      background: var(--navy);
+      border: 1px solid rgba(201, 169, 110, 0.3);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      border-bottom: 1px solid rgba(201, 169, 110, 0.1);
+    }
+
+    .service-row:last-child { border-bottom: none; }
+
+    .service-label {
+      padding: 22px 24px;
+      background: rgba(201, 169, 110, 0.08);
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid rgba(201, 169, 110, 0.1);
+    }
+
+    .service-value {
+      padding: 22px 24px;
+      font-size: 0.93rem;
+      color: var(--text-light);
+      display: flex;
+      align-items: center;
+      line-height: 1.8;
+    }
+
+    .service-free-box {
+      background: linear-gradient(135deg, rgba(201, 169, 110, 0.15) 0%, rgba(201, 169, 110, 0.05) 100%);
+      border: 2px solid var(--gold);
+      border-radius: 4px;
+      padding: 48px 40px;
+      text-align: center;
+    }
+
+    .service-free-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .service-free-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .service-free-desc {
+      font-size: 0.93rem;
+      color: var(--text-light);
+      line-height: 2;
+      margin-bottom: 36px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about { background: var(--navy); }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid rgba(201, 169, 110, 0.2);
+    }
+
+    .about-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.8rem;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .about-name-ruby {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      letter-spacing: 0.2em;
+      margin-bottom: 8px;
+    }
+
+    .about-title {
+      font-size: 0.9rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 28px;
+    }
+
+    .about-text {
+      font-size: 0.93rem;
+      color: var(--text-light);
+      line-height: 2.2;
+      margin-bottom: 16px;
+    }
+
+    .about-philosophy {
+      margin-top: 28px;
+      padding: 22px 26px;
+      background: rgba(201, 169, 110, 0.08);
+      border-left: 3px solid var(--gold);
+    }
+
+    .about-philosophy p {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 0.97rem;
+      color: var(--gold-pale);
+      line-height: 2;
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      background: linear-gradient(135deg, #0d1b2a 0%, #1a2e45 50%, #0d1b2a 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(201, 169, 110, 0.1) 0%, transparent 70%);
+    }
+
+    .cta .section-inner { position: relative; z-index: 1; }
+
+    .cta-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .cta-sub {
+      font-size: 0.97rem;
+      color: var(--text-light);
+      margin-bottom: 56px;
+      line-height: 2.1;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--navy);
+      padding: 24px 80px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 4px;
+      letter-spacing: 0.05em;
+      transition: all 0.3s;
+      font-family: 'Noto Serif JP', serif;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(201, 169, 110, 0.5);
+    }
+
+    .cta-note {
+      margin-top: 28px;
+      font-size: 0.83rem;
+      color: var(--text-muted);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #070f18;
+      padding: 40px;
+      text-align: center;
+      border-top: 1px solid rgba(201, 169, 110, 0.1);
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header { padding: 14px 20px; }
+      .header-logo { font-size: 0.85rem; }
+      .header-cta { padding: 8px 14px; font-size: 0.78rem; }
+
+      section { padding: 70px 24px; }
+      .hero { padding: 100px 24px 60px; }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .hero-photo-col { order: -1; }
+
+      .hero-photo {
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .hero-btn {
+        padding: 18px 32px;
+        font-size: 0.97rem;
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+
+      .flow-step { grid-template-columns: 80px 1fr; }
+      .flow-step:not(:last-child)::after { left: 39px; }
+      .flow-step-circle { width: 48px; height: 48px; font-size: 0.62rem; }
+      .flow-step-body { padding: 4px 0 48px 20px; }
+
+      .session-photo-inner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .case-cards { grid-template-columns: 1fr; }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .about-photo {
+        max-width: 220px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .service-row { grid-template-columns: 110px 1fr; }
+      .service-label { padding: 16px 14px; font-size: 0.78rem; }
+      .service-value { padding: 16px 14px; font-size: 0.88rem; }
+
+      .concept-box { padding: 32px 24px; }
+      .voice-card { padding: 32px 24px; }
+      .target-box { padding: 28px 24px; }
+
+      .cta-btn {
+        padding: 20px 32px;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        display: block;
+      }
+
+      .flow-cycle { gap: 4px; }
+      .flow-cycle-item { padding: 10px 14px; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-logo">整流パートナー 榮美希</div>
+    <a href="https://forms.gle/biCyQrP71T8KD4br9" target="_blank" class="header-cta">無料 経営整理セッションを申し込む</a>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-label">SEIRYU PARTNER</div>
+        <h1 class="hero-catch">
+          社長の<span class="gold">思い</span>を、<br>
+          動く組織に変える。
+        </h1>
+        <ul class="hero-pain-list">
+          <li>任せたいのに、任せられない</li>
+          <li>思いはあるのに、現場に伝わらない</li>
+        </ul>
+        <p class="hero-desc">
+          経営と現場の間にある「伝わらない・進まない」を整え、<br>
+          社長が未来をつくる時間を取り戻す伴走をします。
+        </p>
+        <a href="https://forms.gle/biCyQrP71T8KD4br9" target="_blank" class="hero-btn">無料 経営整理セッションを申し込む</a>
+        <p class="hero-note">Zoom ／ 60〜90分 ／ 秘密厳守</p>
+      </div>
+      <div class="hero-photo-col">
+        <img src="hero_photo.jpg" alt="整流パートナー 榮美希" class="hero-photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <div class="section-inner">
+      <p class="section-label">PROBLEM</p>
+      <h2 class="section-title">こんな状態を、<br>ひとりで抱えていませんか？</h2>
+      <div class="divider"></div>
+      <ul class="problem-list">
+        <li>思いはあるのに、社員や役職者に伝わらない</li>
+        <li>任せたいのに、最後は自分が動くことになる</li>
+        <li>日々の対応に追われ、会社の未来を考える時間がない</li>
+        <li>頑張る人ほど負担が偏り、組織に停滞感がある</li>
+        <li>何から手をつけるべきか、優先順位が見えない</li>
+      </ul>
+      <div class="problem-bottom">
+        <p>
+          それは、誰かの<span class="accent">能力不足</span>ではなく、<br>
+          思い・役割・業務の流れが<span class="accent">噛み合っていないサイン</span>かもしれません。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT -->
+  <section class="concept">
+    <div class="section-inner">
+      <p class="section-label">CONCEPT</p>
+      <h2 class="section-title">「整流」という考え方</h2>
+      <div class="divider"></div>
+      <div class="concept-box">
+        <div class="concept-word">整　流</div>
+        <p class="concept-desc">
+          誰かの気合いや我慢に頼らず、<br>
+          社長の思い、人の役割、業務の流れがつながり、<br>
+          必要なことが必要な人に届く状態をつくること。
+        </p>
+        <p class="concept-sub">
+          人を変える前に、まず流れを整える。<br>
+          それが、整流パートナーの考え方です。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW (継続伴走) -->
+  <section class="flow">
+    <div class="section-inner">
+      <p class="section-label">FLOW</p>
+      <h2 class="section-title">一度話して終わりではなく、<br>変化が根づくまで伴走します。</h2>
+      <div class="divider"></div>
+      <p class="flow-intro">
+        組織の課題は、話して見えた瞬間にすべて解決するものではありません。<br>
+        整理する、優先順位を決める、試す、振り返る——この往復を重ねることで、<br>
+        判断の軸、役割、コミュニケーション、業務の流れが少しずつ整っていきます。
+      </p>
+      <div class="flow-cycle">
+        <div class="flow-cycle-item">整理する</div>
+        <div class="flow-cycle-arrow">→</div>
+        <div class="flow-cycle-item">優先順位を決める</div>
+        <div class="flow-cycle-arrow">→</div>
+        <div class="flow-cycle-item">試す</div>
+        <div class="flow-cycle-arrow">→</div>
+        <div class="flow-cycle-item">振り返る</div>
+        <div class="flow-cycle-arrow">→</div>
+        <div class="flow-cycle-item">仕組みにする</div>
+      </div>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-step-num">
+            <div class="flow-step-circle">STEP<br>1</div>
+          </div>
+          <div class="flow-step-body">
+            <h3 class="flow-step-title">経営整理セッション</h3>
+            <p class="flow-step-desc">
+              今起きていることと、社長が本当に変えたいことを整理します。<br>
+              「嘆き」の正体を言語化し、現状を可視化するところから始めます。
+            </p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">
+            <div class="flow-step-circle">STEP<br>2</div>
+          </div>
+          <div class="flow-step-body">
+            <h3 class="flow-step-title">支援方針のすり合わせ</h3>
+            <p class="flow-step-desc">
+              継続対話を中心に進めるのか、現場・業務の流れの確認まで行うのかを、<br>
+              状況に合わせて設計します。
+            </p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">
+            <div class="flow-step-circle">STEP<br>3</div>
+          </div>
+          <div class="flow-step-body">
+            <h3 class="flow-step-title">継続伴走</h3>
+            <p class="flow-step-desc">
+              対話と実行、振り返りを重ね、変化を日々の判断や組織の動きにつなげていきます。<br>
+              社長が現場から離れ、未来をつくる時間を増やすことがゴールです。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SESSION PHOTO -->
+  <section class="session-photo-section">
+    <div class="section-inner">
+      <div class="session-photo-inner">
+        <img src="session_photo.jpg" alt="対話セッションの様子" class="session-photo">
+        <div>
+          <h3 class="session-caption-title">
+            対話の中で、課題・人・業務の<br>
+            関係を見える形に。
+          </h3>
+          <p class="session-caption-text">
+            考える、試す、振り返るを重ねながら、<br>
+            社長の思いを組織の動きへつなげていきます。<br><br>
+            積み木を使って組織の関係性を可視化するセッションは、<br>
+            言葉にしにくかった課題を「見える形」にする独自のアプローチです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEMES -->
+  <section class="themes">
+    <div class="section-inner">
+      <p class="section-label">THEMES</p>
+      <h2 class="section-title">支援で扱うテーマ例</h2>
+      <div class="divider"></div>
+      <div class="themes-grid">
+        <div class="themes-card">
+          <div class="themes-card-title">経営者の思考・言語化</div>
+          <ul>
+            <li>社長の思い・方向性の言語化</li>
+            <li>幹部や社員との認識のズレ</li>
+            <li>判断基準の整理</li>
+          </ul>
+        </div>
+        <div class="themes-card">
+          <div class="themes-card-title">組織・人の流れ</div>
+          <ul>
+            <li>任せられない仕事、負担の偏り</li>
+            <li>役割分担の見直し</li>
+            <li>部門間のすれ違い</li>
+          </ul>
+        </div>
+        <div class="themes-card">
+          <div class="themes-card-title">業務・コミュニケーション</div>
+          <ul>
+            <li>会議・報連相の流れ</li>
+            <li>現場と経営の間のボトルネック</li>
+            <li>仕組みへの落とし込み</li>
+          </ul>
+        </div>
+      </div>
+      <div class="themes-first-box">
+        <div class="themes-first-title">初回セッションで持ち帰れること</div>
+        <ul class="themes-first-list">
+          <li>今の組織で何が起きているか</li>
+          <li>最初に整えるべきテーマ</li>
+          <li>次に取るべき一歩</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE -->
+  <section class="case">
+    <div class="section-inner">
+      <p class="section-label">CASE STUDY</p>
+      <h2 class="section-title">実績・事例</h2>
+      <div class="divider"></div>
+      <p class="case-note">※ 以下は実務経験・支援を通じて関わった事例です。</p>
+      <div class="case-cards">
+        <div class="case-card">
+          <div class="case-card-header">
+            <div class="case-card-tag">CASE 01 ／ 飲食業</div>
+            <div class="case-card-title">ご夫婦＋アルバイトで運営する<br>イタリアンレストラン</div>
+          </div>
+          <div class="case-card-body">
+            <div class="case-card-problem">
+              <div class="case-card-problem-label">BEFORE ／ 課題</div>
+              <p class="case-card-problem-text">ホールとキッチンのスタッフ間の関係が悪化。現場の雰囲気が客席にも影響していた。</p>
+            </div>
+            <div class="case-card-result">
+              <div class="case-card-result-label">AFTER ／ 成果</div>
+              <p class="case-card-result-text">関係性が改善され、客層が変化。客単価が約1,000円アップ。</p>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-card-header">
+            <div class="case-card-tag">CASE 02 ／ 中小企業</div>
+            <div class="case-card-title">2人経営の会社で<br>売上8,000万円の壁に直面</div>
+          </div>
+          <div class="case-card-body">
+            <div class="case-card-problem">
+              <div class="case-card-problem-label">BEFORE ／ 課題</div>
+              <p class="case-card-problem-text">2人で経営する会社で、売上8,000万円から先に進めない状態が続いていた。</p>
+            </div>
+            <div class="case-card-result">
+              <div class="case-card-result-label">AFTER ／ 成果</div>
+              <p class="case-card-result-text">セッションで組織を変えたことで、越えられなかった売上1億円の壁を突破。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICE -->
+  <section class="voice">
+    <div class="section-inner">
+      <p class="section-label">VOICE</p>
+      <h2 class="section-title">お客様の声</h2>
+      <div class="divider"></div>
+      <div class="voice-cards">
+        <div class="voice-card">
+          <p class="voice-headline">問題は感じていた。でも、どこにあるかが見えていなかった。</p>
+          <p class="voice-text">
+            漠然と「うまくいっていない」とは感じていたものの、どこに問題があるのか自分では見えていませんでした。セッションを通じて、組織のどこにボトルネックがあるかを気付かせてもらえた。それだけで、次に何をすべきかが明確になりました。
+          </p>
+          <p class="voice-attr">— 中小企業 経営者</p>
+        </div>
+        <div class="voice-card">
+          <p class="voice-headline">頑張っているのに、なぜ伝わらないのか。答えは、自分の中にあった。</p>
+          <p class="voice-text">
+            「自分は頑張っている。だから社員にも頑張ってほしい」——そう思いながらも、それを出さないようにしていた。でも、その気持ちが言動に出ていたのだと気付いた。気付いてからスタッフとのコミュニケーションが変わり、自分の思っていることを素直に伝えられるようになった。それが一番良かったと思う。
+          </p>
+          <p class="voice-attr">— 中小企業 経営者</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET -->
+  <section class="target">
+    <div class="section-inner">
+      <p class="section-label">FOR WHOM</p>
+      <h2 class="section-title">こんな企業に向いています</h2>
+      <div class="divider"></div>
+      <div class="target-box">
+        <p>
+          特に、<span class="accent">社員50名以下</span>で、<br>
+          社長の判断と現場の距離が近い企業に向いています。<br><br>
+          製造業・飲食業・サービス業など、<br>
+          現場と経営が直接つながっている組織で力を発揮します。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE -->
+  <section class="service">
+    <div class="section-inner">
+      <p class="section-label">SERVICE</p>
+      <h2 class="section-title">サービス詳細</h2>
+      <div class="divider"></div>
+      <div class="service-table">
+        <div class="service-row">
+          <div class="service-label">支援内容</div>
+          <div class="service-value">経営者コーチング ／ 組織のボトルネック特定・改善支援（内容は状況に合わせて設計）</div>
+        </div>
+        <div class="service-row">
+          <div class="service-label">料金</div>
+          <div class="service-value">企業・組織の状況により異なります。まずは無料セッションにてご相談ください。</div>
+        </div>
+        <div class="service-row">
+          <div class="service-label">対象</div>
+          <div class="service-value">経営者・代表取締役・事業責任者</div>
+        </div>
+        <div class="service-row">
+          <div class="service-label">形式</div>
+          <div class="service-value">Zoom（オンライン）</div>
+        </div>
+      </div>
+      <div class="service-free-box">
+        <div class="service-free-label">FIRST STEP</div>
+        <h3 class="service-free-title">まずは無料 経営整理セッションから</h3>
+        <p class="service-free-desc">
+          いきなり契約ではありません。<br>
+          まず60〜90分、社長の「嘆き」をそのままお聞かせください。<br>
+          現状の整理と、何が詰まっているかを一緒に見ていきます。<br>
+          費用は一切かかりません。
+        </p>
+        <a href="https://forms.gle/biCyQrP71T8KD4br9" target="_blank" class="hero-btn">無料 経営整理セッションを申し込む</a>
+        <p class="hero-note" style="margin-top:16px;">完全無料・Zoom・60〜90分・秘密厳守</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="section-inner">
+      <p class="section-label">ABOUT</p>
+      <h2 class="section-title">整流パートナー 榮美希について</h2>
+      <div class="divider"></div>
+      <div class="about-inner">
+        <div>
+          <img src="btob_about.jpg" alt="榮美希" class="about-photo">
+        </div>
+        <div>
+          <p class="about-name-ruby">さかえ みき</p>
+          <h3 class="about-name">榮 美希</h3>
+          <p class="about-title">整流パートナー ／ エグゼクティブコーチ</p>
+          <p class="about-text">
+            製造・営業・経営企画・総務・人事など、現場と経営をつなぐ仕事に長く関わってきました。
+          </p>
+          <p class="about-text">
+            その中で、社長の思いが現場に届かないこと、責任ある人ほど抱え込みやすいこと、部門間のすれ違いで仕事の流れが滞ることを見てきました。
+          </p>
+          <p class="about-text">
+            私が大切にしているのは、誰かを責めることではありません。社長の思いと現場の現実の間にある"流れの詰まり"を見つけ、無理なく動ける形に整えることです。
+          </p>
+          <div class="about-philosophy">
+            <p>
+              「みんなが楽して、Win-Winが一番いい。」<br>
+              これは手を抜くことではない。誰かの犠牲や我慢の上に成り立つ組織ではなく、仕組みが整っているから自然と回る。だから全員が無理なく動ける。それが整流の目指す姿。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="section-inner">
+      <p class="section-label">CONTACT</p>
+      <h2 class="cta-title">
+        社長の「嘆き」、<br>
+        そのままお聞かせください。
+      </h2>
+      <p class="cta-sub">
+        現場から離れ、未来をつくる時間を増やす手がかりを、<br>
+        一緒に見つけていきましょう。<br><br>
+        まずは60〜90分、無料でお話しできます。<br>
+        秘密は厳守いたします。
+      </p>
+      <a href="https://forms.gle/biCyQrP71T8KD4br9" target="_blank" class="cta-btn">無料 経営整理セッションを申し込む</a>
+      <p class="cta-note">完全無料・Zoom・60〜90分 ／ 秘密は厳守いたします</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>整流パートナー 榮美希</p>
+    <p style="margin-top:8px;">
+      <a href="https://seiryupartner-beep.github.io/lp-sakaemiki-/" target="_blank">個人向けコーチングはこちら</a>
+      　｜　
+      <a href="https://www.instagram.com/sakamiki_seiryu_partner/" target="_blank">Instagram</a>
+    </p>
+    <p style="margin-top:16px;">© 2026 Sakaemiki Seiryu Partner. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
